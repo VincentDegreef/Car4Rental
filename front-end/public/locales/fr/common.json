@@ -1,0 +1,280 @@
+{
+  "home": {
+    "welcome": "Bienvenue au service de location de voitures",
+    "description": "Ceci est le service de location de voitures. Ici, vous pouvez louer une voiture, ajouter une voiture au service ou voir les voitures disponibles à la location.",
+    "welcomeUser": "Bienvenue, ",
+    "cta": "Connexion",
+    "checkoutFollowingPages": "Consultez les pages suivantes :",
+    "carOverview": "Aperçu des voitures",
+    "rentalOverview": "Aperçu des locations",
+    "rentOverview": "Aperçu des loyers"
+  },
+
+  "header": {
+    "cars": "Voitures",
+    "addCar": "Ajouter une voiture",
+    "rentals": "Locations",
+    "rents": "Loyers",
+    "register": "S'inscrire",
+    "login": "Connexion",
+    "viewProfile": "Voir le profil",
+    "notifications": "Notifications",
+    "adminPanel": "Panneau d'administration",
+    "logout": "Déconnexion"
+  },
+
+  "login": {
+    "login": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "register": "S'inscrire",
+    "verify": "Vérifier"
+  },
+
+  "register": {
+    "register": "S'inscrire",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "email": "Email",
+    "phone": "Téléphone",
+    "role": "Rôle",
+    "owner": "Propriétaire",
+    "renter": "Locataire",
+    "login": "Connexion"
+  },
+
+  "verification": {
+    "verification": "Vérification",
+    "pleaseVerify": "Veuillez vérifier votre adresse e-mail pour continuer.",
+    "email": "Email : ",
+    "emailSentTo": "Un email a été envoyé à ",
+    "pleaseEnter": "Veuillez entrer le code de vérification qui a été envoyé à votre email.",
+    "code": "Code : ",
+    "numberOfTries": "Nombre d'essais : "
+  },
+
+  "rental": {
+    "rentalOverview": "Aperçu des locations",
+    "email": "Email : ",
+    "emailPlaceholder": "Rechercher par email...",
+    "brand": "Marque : ",
+    "brandPlaceholder": "Rechercher par marque...",
+    "city": "Ville : ",
+    "cityPlaceholder": "Rechercher par ville...",
+    "startDate": "Date de début : ",
+    "startDatePlaceholder": "Rechercher par date de début...",
+    "endDate": "Date de fin : ",
+    "endDatePlaceholder": "Rechercher par date de fin...",
+    "priceUnder": "Prix inférieur à : ",
+    "priceUnderPlaceholder": "Rechercher par prix inférieur à...",
+    "search": "Recherche",
+    "price": "Prix",
+    "car": "Voiture",
+    "startDate2": "Date de début",
+    "endDate2": "Date de fin",
+    "city2": "Ville",
+    "email2": "Email",
+    "actions": "Actions",
+    "day": "jour",
+    "rent": "Louer",
+    "cancel": "Annuler",
+    "compare": "Comparer",
+    "noRentals": "Aucune location trouvée.",
+    "areYouSure": "Êtes-vous sûr de vouloir annuler cette location ?",
+    "rentalFor": "Location pour : ",
+    "from": "de",
+    "to": "à"
+  },
+
+  "compare": {
+    "compareRentals": "Comparer les locations",
+    "rental1": "Location 1",
+    "rental2": "Location 2",
+    "car": "Voiture : ",
+    "price": "Prix : ",
+    "startDate": "Date de début : ",
+    "endDate": "Date de fin : ",
+    "city": "Ville : ",
+    "duration": "Durée : ",
+    "days": "jours",
+    "totalPrice": "Prix total : ",
+    "fuelAmount": "Quantité de carburant",
+    "distance": "Distance",
+    "endDate2": "Date de fin",
+    "compare": "Comparer",
+    "reset": "Réinitialiser",
+    "compareThis": "Comparer ceci",
+    "switch": "Changer"
+  },
+
+  "rent": {
+    "rentOverview": "Aperçu des loyers",
+    "start": "Début",
+    "end": "Fin",
+    "emailOwner": "Email du propriétaire",
+    "emailRenter": "Email du locataire",
+    "checkout": "Check-out",
+    "complaint": "Plainte",
+    "noRents": "Aucun loyer disponible.",
+    "rentAreYouSure": "Êtes-vous sûr de vouloir annuler le loyer de ",
+    "withLicensePlate": "avec la plaque d'immatriculation",
+    "cancelRent": "Annuler le loyer"
+  },
+
+  "complaint": {
+    "fileComplaint": "Déposer une plainte",
+    "car": "Voiture",
+    "licensePlate": "Plaque d'immatriculation",
+    "complaintMessage": "Message de plainte",
+    "fileComplant": "Déposer une plainte",
+    "back": "Retour"
+  },
+
+  "checkOut": {
+    "checkOutCar": "Vérifier la voiture",
+    "car": "Voiture",
+    "licensePlate": "Plaque d'immatriculation",
+    "startDate": "Date de début",
+    "startMillage": "Kilométrage de départ",
+    "startFuelQuantity": "Quantité de carburant de départ",
+    "endDate": "Date de fin",
+    "returnMillage": "Kilométrage de retour",
+    "returnFuelQuantity": "Quantité de carburant de retour",
+    "checkOut": "Check-out",
+    "back": "Retour"
+  },
+
+  "rentAdd": {
+    "rentCar": "Louer une voiture !",
+    "car": "Voiture",
+    "licensePlate": "Plaque d'immatriculation",
+    "start-Date": "Date de début",
+    "endDate": "Date de fin",
+    "phoneNumber": "Numéro de téléphone",
+    "email": "E-mail",
+    "nationalRegister": "Registre national",
+    "dateOfBirth": "Date de naissance",
+    "driverLicenseNumber": "Numéro de permis de conduire",
+    "startDate": "Date de début",
+    "startMillage": "Kilométrage de départ",
+    "startFuelQuantity": "Quantité de carburant de départ",
+    "rent": "Louer",
+    "cancel": "Annuler"
+  },
+
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "Pas de notifications",
+    "noti": "Notification",
+    "clearNotifications": "Effacer les notifications",
+    "received": "Reçu",
+    "sendAt": "Envoyé à:",
+    "sent": "Envoyé"
+  },
+
+  "addCarPage": {
+    "addNewCar": "Ajouter une nouvelle voiture!"
+  },
+
+  "carOverview": {
+    "title": "Aperçu des voitures",
+    "brand": "Marque",
+    "model": "Modèle",
+    "type": "Type",
+    "licensePlate": "Plaque d'immatriculation",
+    "seats": "Sièges",
+    "childSeats": "Sièges enfant",
+    "foldableSeats": "Sièges pliables",
+    "towBar": "Barre de remorquage",
+    "actions": "Actions",
+    "addRental": "Ajouter une location",
+    "delete": "Supprimer",
+    "details": "Détails",
+    "noCarsFound": "Aucune voiture trouvée.",
+    "confirmationTitle": "Êtes-vous sûr de vouloir supprimer cette voiture?",
+    "carDetails": "Détails de la voiture:",
+    "withLicensePlate": "avec plaque d'immatriculation",
+    "yes": "Oui",
+    "no": "Non",
+    "notAuthorizedToDelete": "Vous n'êtes pas autorisé à supprimer cette voiture.",
+    "notAuthorizedToRental": "Vous n'êtes pas autorisé à ajouter une location pour cette voiture."
+  },
+
+  "carForm": {
+    "brand": "Marque",
+    "model": "Modèle",
+    "type": "Type",
+    "numberOfSeats": "Nombre de sièges",
+    "numberOfChildSeats": "Nombre de sièges enfant",
+    "foldableRearSeats": "Sièges arrière pliables",
+    "towbar": "Barre de remorquage",
+    "licensePlate": "Plaque d'immatriculation",
+    "addCar": "Ajouter une voiture",
+    "cancel": "Annuler",
+    "errors": {
+      "brandRequired": "La marque est requise",
+      "typeRequired": "Le type est requis",
+      "licensePlateRequired": "La plaque d'immatriculation est requise",
+      "numberOfSeatsRequired": "Le nombre de sièges est requis et doit être supérieur à 0"
+    }
+  },
+
+  "addRentalToCarPage": {
+    "addRentalForCar": "Ajoutez une location pour votre voiture!"
+  },
+
+  "rentalForm": {
+    "car": "Voiture",
+    "licensePlate": "Plaque d'immatriculation",
+    "startDate": "Date de début",
+    "startTime": "Heure de début",
+    "endDate": "Date de fin",
+    "endTime": "Heure de fin",
+    "pricePerDay": "Prix par jour",
+    "street": "Rue",
+    "number": "Numéro",
+    "postalCode": "Code postal",
+    "city": "Ville",
+    "email": "Email",
+    "phoneNumber": "Numéro de téléphone",
+    "addRental": "Ajouter une location de voiture",
+    "cancel": "Annuler",
+    "errors": {
+      "startDateRequired": "La date de début est requise",
+      "startDateFuture": "La date de début doit être dans le futur",
+      "startDateBeforeEndDate": "La date de début doit être avant la date de fin",
+      "endDateRequired": "La date de fin est requise",
+      "endDateFuture": "La date de fin doit être dans le futur",
+      "endDateAfterStartDate": "La date de fin doit être après la date de début",
+      "cityRequired": "La ville ne peut pas être vide",
+      "invalidEmail": "Adresse e-mail invalide",
+      "invalidPhoneNumber": "Numéro de téléphone invalide",
+      "priceNegative": "Le prix ne peut pas être négatif",
+      "priceZero": "Le prix ne peut pas être zéro",
+      "priceTooHigh": "Le prix ne peut pas être supérieur à 1000"
+    }
+  },
+
+  "adminPanel": {
+    "title": "Panneau d'administration",
+    "error": "Erreur: ",
+    "username": "Nom d'utilisateur",
+    "email": "Email",
+    "phone": "Numéro de téléphone",
+    "role": "Rôle",
+    "actions": "Actions",
+    "details": "Détails",
+    "banSelf": "Vous ne pouvez pas vous bannir",
+    "ban": "Bannir",
+    "unban": "Débannir",
+    "showDetails": "Afficher les détails",
+    "userCars": "Voitures de l'utilisateur",
+    "showRentals": "Afficher les locations",
+    "noRentals": "Aucune location trouvée",
+    "owner": "Propriétaire",
+    "price": "Prix",
+    "userRents": "Locations de l'utilisateur",
+    "noRents": "Aucune location trouvée"
+  }
+}

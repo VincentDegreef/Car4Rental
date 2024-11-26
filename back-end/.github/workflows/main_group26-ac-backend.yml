@@ -1,0 +1,79 @@
+name: Build and publish JAR app to GitHub Packages - group26-backend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java version
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+
+      - name: Run tests with H2 database
+        run: mvn test
+        working-directory: groep26-backend
+
+      - name: Create application-acc.properties file
+        run: |
+          echo "spring.datasource.url=jdbc:postgresql://group26db.postgres.database.azure.com:5432/postgres" > groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.datasource.username=Admin26" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.datasource.password=Postgres26SE" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.datasource.driver-class-name=org.postgresql.Driver" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.user=Admin26" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.password=Postgres26SE" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.url=jdbc:postgresql://group26db.postgres.database.azure.com:5432/postgres" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.schemas=acceptance" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.locations=classpath:/db/migration" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.enabled=true" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.flyway.baseline-on-migrate=true" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.jpa.properties.hibernate.default_schema=acceptance" >> groep26-backend/src/main/resources/application-acc.properties
+          echo "spring.jpa.hibernate.ddl-auto=none" >> groep26-backend/src/main/resources/application-acc.properties
+
+      - name: Remove dev profile from application.properties
+        run: sed -i '/spring.profiles.active=dev/d' groep26-backend/src/main/resources/application.properties
+
+      - name: Change Spring active profile
+        run: echo "spring.profiles.active=acc" >> groep26-backend/src/main/resources/application.properties
+
+      - name: Build JAR without tests
+        run: mvn package -DskipTests
+        working-directory: groep26-backend
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: java-app
+          path: groep26-backend/target/*.jar
+
+      - name: Publish to GitHub Packages
+        run: mvn -X -f groep26-backend/pom.xml deploy -DskipTests
+        env:
+          MAVEN_OPTS: "-Dmaven.wagon.http.pool=false"
+          GITHUB_TOKEN: ${{ secrets.MAVEN_AUTH_2_TOKEN }}
+
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Delete Previous artifacts
+        uses: actions/delete-package-versions@v3
+        with:
+          token: ${{ secrets.MAVEN_AUTH_2_TOKEN }}
+          repository: UcllSoftwareEngineering2324/software-engineering-backend-groep26
+          package-type: maven
+          package-name: be.ucll.se.groep26-backend
+          package-version: 0.0.1-SNAPSHOT

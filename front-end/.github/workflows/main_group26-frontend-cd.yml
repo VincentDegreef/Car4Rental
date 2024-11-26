@@ -1,0 +1,44 @@
+
+name: CD workflow
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Authenticate with GitHub Packages
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Set npm registry to GitHub Packages
+        run: npm config set @ucllsoftwareengineering2324:registry https://npm.pkg.github.com/
+      - name: Download package 
+        run: npm pack @ucllsoftwareengineering2324/software-engineering-frontend-groep26@0.0.1
+
+      
+      - name: Extract
+        run: |
+          tar -xzf ucllsoftwareengineering2324-software-engineering-frontend-groep26-0.0.1.tgz
+      - name: NPM install
+        run: |
+          cd package
+          npm install
+          cd ..
+      
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'groep26-frontend'
+          slot-name: 'Production'
+          package: package
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F638989B51464F219898FAF7DE107E0A }}
+
+
+
+

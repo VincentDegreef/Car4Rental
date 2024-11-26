@@ -1,0 +1,70 @@
+name: CI Workflow - Group26-frontend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com/' 
+
+      - name: set environment variables
+        # run: | 
+        #   echo "NEXT_PUBLIC_API_URL=https://group26-ac-backend.azurewebsites.net" >> .env.local
+        run: | 
+          echo "NEXT_PUBLIC_API_URL=https://group26-backend.azurewebsites.net" >> .env.local
+
+
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+
+      - name: Create new directory
+        run: mkdir carfrontend
+        
+      - name: Copy .next/standalone folder
+        run: cp -r .next/standalone carfrontend/.
+
+      - name: Copy public folder
+        run: cp -r public carfrontend/standalone/public
+
+      - name: Copy .next/static folder
+        run: cp -r .next/static carfrontend/standalone/.next/static
+
+      - name: Zip artifact for deployment
+        run: cd carfrontend && zip -r ../release.zip * && cd ..
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: car4rent-app
+          path: release.zip
+      
+      - name: Publish to GitHub Packages
+        run: |
+          echo "@ucllsoftwareengineering2324:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+          curl -L \
+          -X DELETE \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/orgs/ucllsoftwareengineering2324/packages/npm/software-engineering-frontend-groep26
+          cd carfrontend/standalone
+          npm publish 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

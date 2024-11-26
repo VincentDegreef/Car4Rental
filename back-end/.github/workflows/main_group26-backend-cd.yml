@@ -1,0 +1,31 @@
+name: Continuous Deployment to Azure
+
+on:
+  workflow_dispatch:
+    inputs: 
+      filename:
+        description: 'Enter package name'
+        required: true
+
+jobs:
+  download:
+    runs-on: ubuntu-latest   
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Download artifact from GitHub Packages
+        run: |
+          curl -u ${{ secrets.GITHUB_USERNAME }}:${{ secrets.WORKFLOW_TOKEN }} \
+            -H "Accept: application/vnd.github.v3+json" \
+            -L "https://maven.pkg.github.com/UcllSoftwareEngineering2324/software-engineering-backend-groep26/be/ucll/se/groep26-backend/0.0.1-SNAPSHOT/${{ github.event.inputs.filename }}" \
+            -o ${{ github.event.inputs.filename }}
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'group26-backend'
+          slot-name: 'Production'
+          package: ${{ github.workspace }}/${{ github.event.inputs.filename }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38853658FBFC454CB0ADD092899C44E2 }}

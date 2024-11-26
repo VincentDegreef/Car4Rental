@@ -1,0 +1,28 @@
+name: Continuous Deployment to Acceptance Env Azure
+
+on:
+  workflow_dispatch:
+    inputs: 
+      filename:
+        description: 'Enter package name'
+        required: true
+
+
+jobs: 
+  download:
+    runs-on: ubuntu-latest   
+    steps:
+      - name: Download artifact from GitHub Packages
+        run: |
+          wget -d --header="Authorization: token ${{ secrets.WORKFLOW_TOKEN }}" \
+            https://maven.pkg.github.com/UcllSoftwareEngineering2324/software-engineering-backend-groep26/be/ucll/se/groep26-backend/0.0.1-SNAPSHOT/${{ github.event.inputs.filename }}
+            
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'group26-ac-backend'
+          slot-name: 'Production'
+          package: ${{ github.workspace }}/${{ github.event.inputs.filename }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C35CBBF72F2458BB14A13A667174935}}

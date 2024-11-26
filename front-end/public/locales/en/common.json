@@ -1,0 +1,285 @@
+{
+  "home": {
+    "welcome": "Welcome to the Car Rental Service",
+    "description": "This is the car rental service. Here you can rent a car, add a car to the service, or view the cars that are available for rent.",
+    "welcomeUser": "Welcome, ",
+    "cta": "Login",
+    "checkoutFollowingPages": "Check out the following pages:",
+    "carOverview": "Car Overview",
+    "rentalOverview": "Rental Overview",
+    "rentOverview": "Rent Overview"
+  },
+
+  "header": {
+    "cars": "Cars",
+    "addCar": "Add Car",
+    "rentals": "Rentals",
+    "rents": "Rents",
+    "register": "Register",
+    "login": "Login",
+    "viewProfile": "View Profile",
+    "notifications": "Notifications",
+    "adminPanel": "Admin Panel",
+    "logout": "Logout"
+  },
+
+  "login": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "register": "Register",
+    "verify": "Verify"
+  },
+
+  "register": {
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "email": "Email",
+    "phone": "Phone",
+    "role": "Role",
+    "owner": "Owner",
+    "renter": "Renter",
+    "login": "Login"
+  },
+
+  "verification": {
+    "verification": "Verification",
+    "pleaseVerify": "Please verify your email address to continue.",
+    "email": "Email: ",
+    "emailSentTo": "An email has been sent to ",
+    "pleaseEnter": "Please enter the verification code that was sent to your email.",
+    "code": "Code: ",
+    "numberOfTries": "Number of tries: "
+  },
+
+  "rental": {
+    "rentalOverview": "Rental Overview",
+    "email": "Email: ",
+    "emailPlaceholder": "Search by email...",
+    "brand": "Brand: ",
+    "brandPlaceholder": "Search by brand...",
+    "city": "City: ",
+    "cityPlaceholder": "Search by city...",
+    "startDate": "Start date: ",
+    "startDatePlaceholder": "Search by start date...",
+    "endDate": "End date: ",
+    "endDatePlaceholder": "Search by end date...",
+    "priceUnder": "Price under: ",
+    "priceUnderPlaceholder": "Search by price under...",
+    "search": "Search",
+    "price": "Price",
+    "car": "Car",
+    "startDate2": "Start Date",
+    "endDate2": "End Date",
+    "city2": "City",
+    "email2": "Email",
+    "actions": "Actions",
+    "day": "day",
+    "rent": "Rent",
+    "cancel": "Cancel",
+    "compare": "Compare",
+    "noRentals": "No rentals found.",
+    "areYouSure": "Are you sure you want to cancel this rental?",
+    "rentalFor": "Rental for: ",
+    "from": "from",
+    "to": "to"
+  },
+
+  "compare": {
+    "compareRentals": "Compare Rentals",
+    "rental1": "Rental 1",
+    "rental2": "Rental 2",
+    "car": "Car: ",
+    "price": "Price: ",
+    "startDate": "Start Date: ",
+    "endDate": "End Date: ",
+    "city": "City: ",
+    "duration": "Duration: ",
+    "days": "days",
+    "totalPrice": "Total Price: ",
+    "fuelAmount": "Fuel Amount",
+    "distance": "Distance",
+    "endDate2": "End Date",
+    "compare": "Compare",
+    "reset": "Reset",
+    "compareThis": "Compare this",
+    "switch": "Switch"
+  },
+
+  "rent": {
+    "rentOverview": "Rent Overview",
+    "start": "Start",
+    "end": "End",
+    "emailOwner": "Email Owner",
+    "emailRenter": "Email Renter",
+    "checkout": "Check-out",
+    "complaint": "Complaint",
+    "noRents": "No rents available.",
+    "rentAreYouSure": "Are you sure you want to cancel the rent of ",
+    "withLicensePlate": "with license plate",
+    "cancelRent": "Cancel Rent"
+  },
+
+  "complaint": {
+    "fileComplaint": "File a complaint",
+    "car": "Car",
+    "licensePlate": "License Plate",
+    "complaintMessage": "Complaint message",
+    "fileComplant": "File complaint",
+    "back": "Back"
+  },
+
+  "checkOut": {
+    "checkOutCar": "Check out car",
+    "car": "Car",
+    "licensePlate": "License Plate",
+    "startDate": "Start-Date",
+    "startMillage": "Start Millage",
+    "startFuelQuantity": "Start Fuel Quantity",
+    "endDate": "End date",
+    "returnMillage": "Return Millage",
+    "returnFuelQuantity": "Return Fuel Quantity",
+    "checkOut": "Check-out",
+    "back": "Back"
+  },
+
+  "rentAdd": {
+    "rentCar": "Rent a car!",
+    "car": "Car",
+    "licensePlate": "License Plate",
+    "start-Date": "Start-Date",
+    "endDate": "End-Date",
+    "phoneNumber": "Phone Number",
+    "email": "E-mail",
+    "nationalRegister": "National Register",
+    "dateOfBirth": "Date of birth",
+    "driverLicenseNumber": "Driving licence number",
+    "startDate": "Start date",
+    "startMillage": "Start Millage",
+    "startFuelQuantity": "Start Fuel Quantity",
+    "rent": "Rent",
+    "cancel": "Cancel"
+  },
+
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "No notificationss",
+    "noti": "Notification",
+    "clearNotifications": "Clear notifications",
+    "received": "Received",
+    "sendAt": "Send at:",
+    "sent": "Sent"
+  },
+
+  "addCarPage": {
+    "addNewCar": "Add a new car!"
+  },
+
+  "carOverview": {
+    "title": "Overview cars",
+    "brand": "Brand",
+    "model": "Model",
+    "type": "Type",
+    "licensePlate": "License Plate",
+    "seats": "Seats",
+    "childSeats": "Child Seats",
+    "foldableSeats": "Foldable Seats",
+    "towBar": "Tow Bar",
+    "actions": "Actions",
+    "addRental": "Add rental",
+    "delete": "Delete",
+    "details": "Details",
+    "noCarsFound": "No cars found.",
+    "confirmationTitle": "Are you sure you want to delete this car?",
+    "carDetails": "Car details:",
+    "withLicensePlate": "with license plate",
+    "yes": "Yes",
+    "no": "No",
+    "notAuthorizedToDelete": "You are not authorized to delete this car.",
+    "notAuthorizedToRental": "You are not authorized to add a rental for this car."
+  },
+
+  "carForm": {
+    "brand": "Brand",
+    "model": "Model",
+    "type": "Type",
+    "numberOfSeats": "Number of Seats",
+    "numberOfChildSeats": "Number of Child Seats",
+    "foldableRearSeats": "Foldable Rear Seats",
+    "towbar": "Towbar",
+    "licensePlate": "License Plate",
+    "addCar": "Add Car",
+    "cancel": "Cancel",
+    "errors": {
+      "brandRequired": "Brand is required",
+      "typeRequired": "Type is required",
+      "licensePlateRequired": "License plate is required",
+      "numberOfSeatsRequired": "Number of seats is required and must be greater than 0"
+    }
+  },
+
+  "addRentalToCarPage": {
+    "addRentalForCar": "Add a rental for your car!"
+  },
+
+  "rentalForm": {
+    "car": "Car",
+    "licensePlate": "License Plate",
+    "startDate": "Start Date",
+    "startTime": "Start Time",
+    "endDate": "End Date",
+    "endTime": "End Time",
+    "pricePerDay": "Price per Day",
+    "street": "Street",
+    "number": "Number",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "addRental": "Add Car Rental",
+    "cancel": "Cancel",
+    "errors": {
+      "startDateRequired": "Start date is required",
+      "startDateFuture": "Start date must be in the future",
+      "startDateBeforeEndDate": "Start date must be before end date",
+      "endDateRequired": "End date is required",
+      "endDateFuture": "End date must be in the future",
+      "endDateAfterStartDate": "End date must be after start date",
+      "cityRequired": "City cannot be empty",
+      "invalidEmail": "Invalid email address",
+      "invalidPhoneNumber": "Invalid phone number",
+      "priceNegative": "Price cannot be negative",
+      "priceZero": "Price cannot be zero",
+      "priceTooHigh": "Price cannot be higher than 1000"
+    }
+  },
+
+  "adminPanel": {
+    "title": "Admin Panel",
+    "error": "Error: ",
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone number",
+    "role": "Role",
+    "actions": "Actions",
+    "details": "Details",
+    "banSelf": "You cannot ban yourself",
+    "ban": "Ban",
+    "unban": "Unban",
+    "showDetails": "Show details",
+    "userCars": "User cars",
+    "showRentals": "Show rentals",
+    "noRentals": "No rentals found",
+    "owner": "Owner",
+    "price": "Price",
+    "userRents": "User rents",
+    "noRents": "No rents found"
+  },
+
+  "alert":{
+    "close": "Close"
+  }
+
+}

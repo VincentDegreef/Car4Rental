@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  label {
+    @apply block text-gray-700 text-sm font-bold mb-2;
+  }
+}

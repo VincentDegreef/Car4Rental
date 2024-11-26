@@ -1,0 +1,110 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: CI Workflow - Deploy to AC - Group26-frontend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com/' 
+
+      - name: set environment variables
+        # run: | 
+        #   echo "NEXT_PUBLIC_API_URL=https://group26-ac-backend.azurewebsites.net" >> .env.local
+        run: | 
+          echo "NEXT_PUBLIC_API_URL=https://group26-backend.azurewebsites.net" >> .env.local
+
+
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+
+      - name: Create new directory
+        run: mkdir carfrontend
+        
+      - name: Copy .next/standalone folder
+        run: cp -r .next/standalone carfrontend/.
+
+      - name: Copy public folder
+        run: cp -r public carfrontend/standalone/public
+
+      - name: Copy .next/static folder
+        run: cp -r .next/static carfrontend/standalone/.next/static
+
+      - name: Zip artifact for deployment
+        run: cd carfrontend && zip -r ../release.zip * && cd ..
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: car4rent-app
+          path: release.zip
+      
+      - name: Publish to GitHub Packages
+        run: |
+          echo "@ucllsoftwareengineering2324:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+          curl -L \
+          -X DELETE \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/orgs/ucllsoftwareengineering2324/packages/npm/software-engineering-frontend-groep26
+          cd carfrontend/standalone
+          npm publish 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Authenticate with GitHub Packages
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Set npm registry to GitHub Packages
+        run: npm config set @ucllsoftwareengineering2324:registry https://npm.pkg.github.com/
+      - name: Download package 
+        run: npm pack @ucllsoftwareengineering2324/software-engineering-frontend-groep26@0.0.1
+
+      
+      - name: Extract
+        run: |
+          tar -xzf ucllsoftwareengineering2324-software-engineering-frontend-groep26-0.0.1.tgz
+      - name: NPM install
+        run: |
+          cd package
+          npm install
+          cd ..
+      
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'group26-ac-frontend'
+          slot-name: 'Production'
+          package: package
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0ACF9E5873C34C3898DD3B94D5B02879 }}
+
+          
+  

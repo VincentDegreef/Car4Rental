@@ -1,0 +1,282 @@
+{
+  "home": {
+    "welcome": "Welkom bij de Autoverhuurservice",
+    "description": "Dit is de autoverhuurservice. Hier kunt u een auto huren, een auto toevoegen aan de service, of de auto's bekijken die beschikbaar zijn voor verhuur.",
+    "welcomeUser": "Welkom, ",
+    "cta": "Inloggen",
+    "checkoutFollowingPages": "Bekijk de volgende pagina's:",
+    "carOverview": "Auto Overzicht",
+    "rentalOverview": "Verhuur Overzicht",
+    "rentOverview": "Huur Overzicht"
+  },
+
+  "header": {
+    "cars": "Auto's",
+    "addCar": "Auto Toevoegen",
+    "rentals": "Verhuringen",
+    "rents": "Huren",
+    "register": "Registreren",
+    "login": "Inloggen",
+    "viewProfile": "Profiel Bekijken",
+    "notifications": "Meldingen",
+    "adminPanel": "Admin Paneel",
+    "logout": "Uitloggen"
+  },
+
+  "login": {
+    "login": "Inloggen",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "register": "Registreren",
+    "verify": "Verifiëren"
+  },
+
+  "register": {
+    "register": "Registreren",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "confirmPassword": "Bevestig Wachtwoord",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "role": "Rol",
+    "owner": "Eigenaar",
+    "renter": "Huurder",
+    "login": "Inloggen"
+  },
+
+  "verification": {
+    "verification": "Verificatie",
+    "pleaseVerify": "Verifieer uw e-mailadres om verder te gaan.",
+    "email": "E-mail: ",
+    "emailSentTo": "Er is een e-mail verzonden naar ",
+    "pleaseEnter": "Voer de verificatiecode in die naar uw e-mail is verzonden.",
+    "code": "Code: ",
+    "numberOfTries": "Aantal pogingen: "
+  },
+
+  "rental": {
+    "rentalOverview": "Verhuur Overzicht",
+    "email": "E-mail: ",
+    "emailPlaceholder": "Zoeken op e-mail...",
+    "brand": "Merk: ",
+    "brandPlaceholder": "Zoeken op merk...",
+    "city": "Stad: ",
+    "cityPlaceholder": "Zoeken op stad...",
+    "startDate": "Startdatum: ",
+    "startDatePlaceholder": "Zoeken op startdatum...",
+    "endDate": "Einddatum: ",
+    "endDatePlaceholder": "Zoeken op einddatum...",
+    "priceUnder": "Prijs onder: ",
+    "priceUnderPlaceholder": "Zoeken op prijs onder...",
+    "search": "Zoeken",
+    "price": "Prijs",
+    "car": "Auto",
+    "startDate2": "Startdatum",
+    "endDate2": "Einddatum",
+    "city2": "Stad",
+    "email2": "E-mail",
+    "actions": "Acties",
+    "day": "dag",
+    "rent": "Huren",
+    "cancel": "Annuleren",
+    "compare": "Vergelijken",
+    "noRentals": "Geen verhuringen gevonden.",
+    "areYouSure": "Weet u zeker dat u deze verhuur wilt annuleren?",
+    "rentalFor": "Verhuur voor: ",
+    "from": "van",
+    "to": "tot"
+  },
+
+  "compare": {
+    "compareRentals": "Verhuringen Vergelijken",
+    "rental1": "Verhuur 1",
+    "rental2": "Verhuur 2",
+    "car": "Auto: ",
+    "price": "Prijs: ",
+    "startDate": "Startdatum: ",
+    "endDate": "Einddatum: ",
+    "city": "Stad: ",
+    "duration": "Duur: ",
+    "days": "dagen",
+    "totalPrice": "Totale Prijs: ",
+    "fuelAmount": "Brandstofhoeveelheid",
+    "distance": "Afstand",
+    "endDate2": "Einddatum",
+    "compare": "Vergelijken",
+    "reset": "Reset",
+    "compareThis": "Vergelijk dit",
+    "switch": "Wisselen"
+  },
+
+  "rent": {
+    "rentOverview": "Huur Overzicht",
+    "start": "Start",
+    "end": "Einde",
+    "emailOwner": "E-mail Eigenaar",
+    "emailRenter": "E-mail Huurder",
+    "checkout": "Afrekenen",
+    "complaint": "Klacht",
+    "noRents": "Geen huren beschikbaar.",
+    "rentAreYouSure": "Weet u zeker dat u de huur van ",
+    "withLicensePlate": "met kentekenplaat",
+    "cancelRent": "Huur Annuleren"
+  },
+
+  "complaint": {
+    "fileComplaint": "Een klacht indienen",
+    "car": "Auto",
+    "licensePlate": "Kentekenplaat",
+    "complaintMessage": "Klachtbericht",
+    "fileComplant": "Klacht indienen",
+    "back": "Terug"
+  },
+
+  "checkOut": {
+    "checkOutCar": "Auto uitchecken",
+    "car": "Auto",
+    "licensePlate": "Kentekenplaat",
+    "startDate": "Startdatum",
+    "startMillage": "Start Kilometerstand",
+    "startFuelQuantity": "Start Brandstofhoeveelheid",
+    "endDate": "Einddatum",
+    "returnMillage": "Terugkeer Kilometerstand",
+    "returnFuelQuantity": "Terugkeer Brandstofhoeveelheid",
+    "checkOut": "Uitchecken",
+    "back": "Terug"
+  },
+
+  "rentAdd": {
+    "rentCar": "Huur een auto!",
+    "car": "Auto",
+    "licensePlate": "Kentekenplaat",
+    "start-Date": "Startdatum",
+    "endDate": "Einddatum",
+    "phoneNumber": "Telefoonnummer",
+    "email": "E-mail",
+    "nationalRegister": "Nationaal Register",
+    "dateOfBirth": "Geboortedatum",
+    "driverLicenseNumber": "Rijbewijsnummer",
+    "startDate": "Startdatum",
+    "startMillage": "Start Kilometerstand",
+    "startFuelQuantity": "Start Brandstofhoeveelheid",
+    "rent": "Huren",
+    "cancel": "Annuleren"
+  },
+
+  "notifications": {
+    "title": "Meldingen",
+    "noNotifications": "Geen meldingen",
+    "noti": "Melding",
+    "clearNotifications": "Meldingen wissen",
+    "received": "Ontvangen",
+    "sendAt": "Verzonden om:",
+    "sent": "Verzonden"
+  },
+
+  "addCarPage": {
+    "addNewCar": "Voeg een nieuwe auto toe!"
+  },
+
+  "carOverview": {
+    "title": "Overzicht auto's",
+    "brand": "Merk",
+    "model": "Model",
+    "type": "Type",
+    "licensePlate": "Kenteken",
+    "seats": "Zitplaatsen",
+    "childSeats": "Kinderzitjes",
+    "foldableSeats": "Opklapbare stoelen",
+    "towBar": "Trekhaak",
+    "actions": "Acties",
+    "addRental": "Huur toevoegen",
+    "delete": "Verwijderen",
+    "details": "Details",
+    "noCarsFound": "Geen auto's gevonden.",
+    "confirmationTitle": "Weet u zeker dat u deze auto wilt verwijderen?",
+    "carDetails": "Autogegevens:",
+    "withLicensePlate": "met kenteken",
+    "yes": "Ja",
+    "no": "Nee",
+    "notAuthorizedToDelete": "U bent niet bevoegd om deze auto te verwijderen.",
+    "notAuthorizedToRental": "U bent niet bevoegd om een ​​verhuring voor deze auto toe te voegen."
+
+  },
+
+  "carForm": {
+    "brand": "Merk",
+    "model": "Model",
+    "type": "Type",
+    "numberOfSeats": "Aantal zitplaatsen",
+    "numberOfChildSeats": "Aantal kinderzitjes",
+    "foldableRearSeats": "Opklapbare achterstoelen",
+    "towbar": "Trekhaak",
+    "licensePlate": "Kenteken",
+    "addCar": "Auto toevoegen",
+    "cancel": "Annuleren",
+    "errors": {
+      "brandRequired": "Merk is vereist",
+      "typeRequired": "Type is vereist",
+      "licensePlateRequired": "Kenteken is vereist",
+      "numberOfSeatsRequired": "Aantal zitplaatsen is vereist en moet groter zijn dan 0"
+    }
+  },
+
+  "addRentalToCarPage": {
+    "addRentalForCar": "Voeg een huur toe voor uw auto!"
+  },
+
+  "rentalForm": {
+    "car": "Auto",
+    "licensePlate": "Kenteken",
+    "startDate": "Startdatum",
+    "startTime": "Starttijd",
+    "endDate": "Einddatum",
+    "endTime": "Eindtijd",
+    "pricePerDay": "Prijs per dag",
+    "street": "Straat",
+    "number": "Nummer",
+    "postalCode": "Postcode",
+    "city": "Stad",
+    "email": "E-mail",
+    "phoneNumber": "Telefoonnummer",
+    "addRental": "Autoverhuur toevoegen",
+    "cancel": "Annuleren",
+    "errors": {
+      "startDateRequired": "Startdatum is vereist",
+      "startDateFuture": "Startdatum moet in de toekomst liggen",
+      "startDateBeforeEndDate": "Startdatum moet voor einddatum liggen",
+      "endDateRequired": "Einddatum is vereist",
+      "endDateFuture": "Einddatum moet in de toekomst liggen",
+      "endDateAfterStartDate": "Einddatum moet na startdatum liggen",
+      "cityRequired": "Stad mag niet leeg zijn",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "invalidPhoneNumber": "Ongeldig telefoonnummer",
+      "priceNegative": "Prijs kan niet negatief zijn",
+      "priceZero": "Prijs kan niet nul zijn",
+      "priceTooHigh": "Prijs kan niet hoger zijn dan 1000"
+    }
+  },
+
+  "adminPanel": {
+    "title": "Beheerderspaneel",
+    "error": "Fout: ",
+    "username": "Gebruikersnaam",
+    "email": "E-mail",
+    "phone": "Telefoonnummer",
+    "role": "Rol",
+    "actions": "Acties",
+    "details": "Details",
+    "banSelf": "Je kunt jezelf niet verbannen",
+    "ban": "Verbannen",
+    "unban": "Opheffen verbanning",
+    "showDetails": "Details tonen",
+    "userCars": "Auto's van gebruiker",
+    "showRentals": "Verhuringen tonen",
+    "noRentals": "Geen verhuringen gevonden",
+    "owner": "Eigenaar",
+    "price": "Prijs",
+    "userRents": "Huren van gebruiker",
+    "noRents": "Geen huren gevonden"
+  }
+
+}
